@@ -1,0 +1,18 @@
+{
+  "name": "vhiepp/vndatafaker",
+  "description": "Pakage fake data Vietnamese",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Van Hiep",
+      "email": "dhiep2307@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Vhiepp\\FakeDataVN\\": "src/"
+    }
+  }
+}
