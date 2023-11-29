@@ -3,6 +3,7 @@
   "description": "Pakage fake data Vietnamese",
   "type": "package",
   "license": "MIT",
+  "version": "0.0.1",
   "authors": [
     {
       "name": "Van Hiep",
@@ -12,7 +13,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Vhiepp\\FakeDataVN\\": "src/"
+      "Vhiepp\\VNDataFaker\\": "src/"
     }
   }
 }

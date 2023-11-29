@@ -12,6 +12,7 @@ class VNFaker {
   const FILE_MIDNAME         = 'midname.json';
   const FILE_COMPANY         = 'company.json';
   const FILE_COLORNAME       = 'color_name.json';
+  const FILE_COMMENT         = 'comment.json';
 
   public function __construct() {
 		// Do something here
@@ -56,6 +57,11 @@ class VNFaker {
     return $str_response;
 	}
 
-  
+  public static function comment() {
+    $data_comments = self::readfile(self::FILE_COMMENT);
+    $comment       = self::array_rand($data_comments);
+
+    return $comment['content'];
+  }
 
 }
