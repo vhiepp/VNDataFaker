@@ -93,13 +93,16 @@ class VNFaker {
 		return strtolower(self::str_clean(self::vnToString($fullname), true));
 	}
 
-  public static function email(array $domain = []) {
+  public static function email(array $domain = [], string $name = null) {
     $email  = '@';
 		if(!$domain) {
 			$domain = ['gmail.com', 'outlook.com'];
 		}
+    if (!$name) {
+      $name = self::username();
+    }
 		$email .= self::array_rand($domain);
-		return strtolower(self::username() . $email);
+		return strtolower($name . $email);
   }
 
   public static function vnToString($str){
