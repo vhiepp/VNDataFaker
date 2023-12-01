@@ -37,4 +37,4 @@
   // var_dump($test);
   // echo '</pre>';
 
-echo VNFaker::comment();
+echo VNFaker::gender();
