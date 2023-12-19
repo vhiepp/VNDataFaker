@@ -177,17 +177,19 @@ class VNFaker {
     return self::IMG_SERVER_URL . '?image=avatars/image%20(' . $avatarIndex . ').jpg&w='. $w . '&h=' . $h;
   }
 
-  public static function image(int $w = 800, int $h = 400)
+  public static function image(int $w = 800, int $h = 400, string $text = null)
   {
     $color = [
       'red' => rand(0, 255),
       'green' => rand(0, 255),
       'blue' => rand(0, 255),
     ];
-    $text = self::statusText();
-    if (strlen($text) > 30) {
-      $text = substr($text, 0, 27);
-      $text .= "...";
+    if (!$text) {
+      $text = self::statusText();
+      if (strlen($text) > 30) {
+        $text = substr($text, 0, 27);
+        $text .= "...";
+      }
     }
     $path = self::IMG_SERVER_URL . "?w=$w&h=$h&text=$text&red=" . $color['red'] . "&green=" . $color['green'] . "&blue=" . $color['blue'];
     return str_replace(' ', '%20', $path);
