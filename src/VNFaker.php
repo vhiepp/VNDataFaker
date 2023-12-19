@@ -13,6 +13,8 @@ class VNFaker {
   const FILE_COMPANY         = 'company.json';
   const FILE_COLORNAME       = 'color_name.json';
   const FILE_COMMENT         = 'comment.json';
+  const FILE_STATUS          = 'status.json';
+  const IMG_SERVER_URL       = 'https://img.vhiep.com';
 
   public function __construct() {
 		// Do something here
@@ -57,6 +59,12 @@ class VNFaker {
     $data_comments = self::readfile(self::FILE_COMMENT);
     $comment       = self::array_rand($data_comments);
     return $comment['content'];
+  }
+
+  public static function statusText() {
+    $data_status = self::readfile(self::FILE_STATUS);
+    $status       = self::array_rand($data_status);
+    return $status['content'];
   }
 
   public static function firstname($work = 1) {
@@ -161,6 +169,12 @@ class VNFaker {
 
   public static function gender($gender = ['male', 'female', 'other']) {
     return self::array_rand($gender);
+  }
+
+  public static function avatar(int $w = 300, int $h = 300)
+  {
+    $avatarIndex = rand(1, 2550);
+    return self::IMG_SERVER_URL . '?image=avatars/image (' . $avatarIndex . ').jpg&w='. $w . '&h=' . $h;
   }
 
 }

@@ -16,10 +16,10 @@
   // echo '<pre>';
   // var_dump(convertFileLineToJson('../test/firstname_1.txt'));
   // echo '</pre>';
-/*
-  $fp = fopen("../src/data/comment.json", "w");
-  fwrite($fp, mb_convert_encoding(json_encode(convertFileLineToJson('../test/comment.txt', 'content')), "UTF-8"));
-  fclose($fp); */
+
+  // $fp = fopen("../src/data/status.json", "w");
+  // fwrite($fp, mb_convert_encoding(json_encode(convertFileLineToJson('../test/status.txt', 'content')), "UTF-8"));
+  // fclose($fp);
 
   // $test = VNFaker::readfile(VNFaker::FILE_PROVINCES);
 
@@ -37,4 +37,4 @@
   // var_dump($test);
   // echo '</pre>';
 
-echo VNFaker::gender();
+echo VNFaker::statusText();
