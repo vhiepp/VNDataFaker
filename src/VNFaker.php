@@ -174,7 +174,7 @@ class VNFaker {
   public static function avatar(int $w = 300, int $h = 300)
   {
     $avatarIndex = rand(1, 2550);
-    return self::IMG_SERVER_URL . '?image=avatars/image (' . $avatarIndex . ').jpg&w='. $w . '&h=' . $h;
+    return self::IMG_SERVER_URL . '?image=avatars/image%20(' . $avatarIndex . ').jpg&w='. $w . '&h=' . $h;
   }
 
 }
