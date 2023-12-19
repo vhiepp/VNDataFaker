@@ -37,4 +37,4 @@
   // var_dump($test);
   // echo '</pre>';
 
-echo VNFaker::statusText();
+echo VNFaker::image();
