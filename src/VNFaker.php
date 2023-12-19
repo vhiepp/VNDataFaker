@@ -186,10 +186,10 @@ class VNFaker {
     ];
     if (!$text) {
       $text = self::statusText();
-      if (strlen($text) > 30) {
-        $text = substr($text, 0, 27);
-        $text .= "...";
-      }
+    }
+    if (strlen($text) > 30) {
+      $text = substr($text, 0, 27);
+      $text .= "...";
     }
     $path = self::IMG_SERVER_URL . "?w=$w&h=$h&text=$text&red=" . $color['red'] . "&green=" . $color['green'] . "&blue=" . $color['blue'];
     return str_replace(' ', '%20', $path);
